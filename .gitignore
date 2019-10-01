@@ -1,4 +1,5 @@
-node_modules
 .DS_Store
+/config.ts
 /data/**/*.csv
 /data/**/*.json
+node_modules

@@ -14,6 +14,10 @@ export interface SearchResult {
   totalReviews: number
 }
 
+export interface CreateReviewUrlProps {
+  itemId: string
+}
+
 export interface ReviewMetadataScores {
   5: number
   4: number
