@@ -1,6 +1,6 @@
 {
   "name": "lazada-review-scraper",
-  "description": "Scrape product reviews from Lazada based on categories",
+  "description": "Scrape product reviews from Lazada Indonesia based on categories",
   "version": "1.0.0",
   "repository": "git@github.com:grikomsn/lazada-review-scraper.git",
   "author": "Griko Nibras <grikomsn@gmail.com>",

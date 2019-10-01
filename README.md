@@ -4,7 +4,7 @@
 
 # Lazada Review Scraper
 
-🚀 _Scrape product reviews from Lazada based on categories_ 🏄‍
+🚀 _Scrape product reviews from Lazada Indonesia based on categories_ 🏄‍
 
 ![cat scraping](https://media2.giphy.com/media/lnCggcJbfrY8E/source.gif)
 
@@ -26,7 +26,7 @@ _More detailed documentation on this issue coming soon..._
 
 ## Download Data 📫
 
-You can download pre-scraped datasets at the [releases page](./releases) or also at [Kaggle datasets (Lazada Reviews)](https://kaggle.com/grikomsn/lazada-reviews).
+You can download pre-scraped datasets at the [releases page](./releases) or also at [Kaggle datasets (Lazada Indonesian Reviews)](https://kaggle.com/grikomsn/lazada-indonesian-reviews).
 
 ## Manual Scrape 🔧
 
