@@ -13,9 +13,16 @@
 ## Features ✨
 
 - Based on [Amazon Cell Phones Reviews dataset project](https://github.com/grikomsn/amazon-cell-phones-reviews)
+- Scrape one or multiple categories
 - Scrapes basic metadata with ratings and reviews
 - Use multiple Puppeteer pages as _workers_
-- Configurable timeout for adjusting server rate limits (defaults to 5 seconds)
+- Configurable timeout for rate limits cooldowns (read more below)
+
+## Important Note 👀
+
+Due to Lazada servers limits _unusual requests_, this scraper only utilize one worker to scrape search results, while the review scraping process is set to five workers with a five second timeout.
+
+_More detailed documentation on this issue coming soon..._
 
 ## Download Data 📫
 
@@ -39,18 +46,18 @@ You can download pre-scraped datasets at the [releases page](./releases) or also
 #### Preparation
 
 - Make sure the dependencies are downloaded by running `npm install` or `yarn`.
-- (Optional) Copy `config.default.ts` (this file is ignored with git) to `config.ts` and customize config variables on `config.ts`.
+- Copy `config.default.ts` (this file is ignored with git) to `config.ts` and customize config variables on `config.ts`.
 
 #### Using Visual Studio Code
 
 - Open the project directory in Visual Studio Code.
-- Select and execute **Scrape Search Results** in the launch options on the Debug tab (exported to `./data/yyyymmdd-results.csv`).
-- Then select and execute **Scrape Item Reviews** (exported to `./data/yyyymmdd-reviews.csv`).
+- Select and execute **Scrape Search Results** in the launch options on the Debug tab (exported to `./data/yyyymmdd-category-items.csv`).
+- Then select and execute **Scrape Item Reviews** (exported to `./data/yyyymmdd-category-reviews.csv`).
 
 #### Using Command Line
 
-- Run `npm run scrape:items` or `yarn scrape:items` first to scrape initial item results (exported to `./data/yyyymmdd-results.csv`).
-- Then run `npm run scrape:reviews` or `yarn scrape:reviews` to scrape item reviews (exported to `./data/yyyymmdd-reviews.csv`).
+- Run `npm run scrape:items` or `yarn scrape:items` first to scrape initial item results (exported to `./data/yyyymmdd-category-items.csv`).
+- Then run `npm run scrape:reviews` or `yarn scrape:reviews` to scrape item reviews (exported to `./data/yyyymmdd-category-reviews.csv`).
 
 ## Available Scripts 📝
 

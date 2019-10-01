@@ -34,16 +34,15 @@ async function scrapeSearchResults() {
       const { items } = await worker.evaluate(extractSearchResult)
       allItems.push(...items)
     }
+
+    allItems = allItems.sort(({ itemId: a }, { itemId: b }) =>
+      a < b ? -1 : a > b ? 1 : 0
+    )
+
+    console.log(`Saving '${category}' results...`)
+    saveToData(allItems, `${date}-${category}-items.csv`)
   }
-
   await browser.close()
-
-  allItems = allItems.sort(({ itemId: a }, { itemId: b }) =>
-    a < b ? -1 : a > b ? 1 : 0
-  )
-
-  console.log('Saving item results...')
-  saveToData(allItems, `${date}-items.csv`)
 }
 
 scrapeSearchResults()
