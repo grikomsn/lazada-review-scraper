@@ -1,0 +1,23 @@
+{
+  "name": "lazada-review-scraper",
+  "version": "1.0.0",
+  "repository": "git@github.com:grikomsn/lazada-review-scraper.git",
+  "author": "Griko Nibras <grikomsn@gmail.com>",
+  "scripts": {
+    "scrape": "yarn scrape:items && yarn scrape:reviews",
+    "scrape:items": "ts-node scrapeSearchResults.ts",
+    "scrape:reviews": "ts-node scrapeItemReviews.ts"
+  },
+  "dependencies": {
+    "papaparse": "^5.1.0",
+    "puppeteer": "^1.20.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/papaparse": "^5.0.1",
+    "@types/puppeteer": "^1.20.0",
+    "prettier": "^1.18.2"
+  },
+  "license": "MIT"
+}
