@@ -26,7 +26,7 @@ _More detailed documentation on this issue coming soon..._
 
 ## Download Data 📫
 
-You can download pre-scraped datasets at the [releases page](./releases) or also at [Kaggle datasets (Lazada Indonesian Reviews)](https://kaggle.com/grikomsn/lazada-indonesian-reviews).
+You can download pre-scraped datasets at [Kaggle (Lazada Indonesian Reviews)](https://kaggle.com/grikomsn/lazada-indonesian-reviews).
 
 ## Manual Scrape 🔧
 
