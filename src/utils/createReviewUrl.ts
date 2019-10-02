@@ -1,8 +1,6 @@
 import qs from 'querystring'
 
-import { CreateReviewUrlProps } from '../types'
-
-export default function createReviewUrl({ itemId }: CreateReviewUrlProps) {
+export default function createReviewUrl({ itemId }: { itemId: string }) {
   const queries = { itemId, pageSize: 999999, pageNo: 1 }
   const query = qs.encode(queries)
 

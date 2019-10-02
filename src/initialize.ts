@@ -21,12 +21,12 @@ export default async function initialize({ useBrowser = true } = {}) {
   if (useBrowser) {
     browser = await puppeteer.launch()
     workers = await Promise.all(
-      Array(config.NUMBER_OF_WORKERS)
+      Array(config.numberOfWorkers)
         .fill(undefined)
         .map(() => browser.newPage())
     )
 
-    if (config.FILTER_REQUESTS) {
+    if (config.filterRequests) {
       workers.forEach(async worker => {
         await worker.setRequestInterception(true)
         worker.on('request', request => {

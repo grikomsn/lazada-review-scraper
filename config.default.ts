@@ -1,4 +1,11 @@
-export const CATEGORIES = ['beli-handphone']
-export const FILTER_REQUESTS = false
-export const NUMBER_OF_WORKERS = 5
-export const REQUEST_DELAY = 5000
+export const categories = [
+  'beli-handphone',
+  'beli-harddisk-eksternal',
+  'beli-laptop',
+  'beli-smart-tv',
+  'jual-flash-drives',
+  'shop-televisi-digital',
+]
+export const filterRequests = false
+export const numberOfWorkers = 5
+export const requestDelay = 5000

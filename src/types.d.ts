@@ -6,6 +6,7 @@ export interface CreateSearchUrlProps {
 
 export interface SearchResult {
   itemId: string
+  category?: string
   name: string
   brandName: string
   url: string
@@ -14,43 +15,25 @@ export interface SearchResult {
   totalReviews: number
 }
 
-export interface CreateReviewUrlProps {
-  itemId: string
-}
-
-export interface ReviewMetadataScores {
-  5: number
-  4: number
-  3: number
-  2: number
-  1: number
-}
-
-export interface ReviewMetadata {
-  itemId: number
-  totalItems: number
-  average: number
-  rateCount: number
-  reviewCount: number
-  scores: ReviewMetadataScores
-}
-
 export interface Review {
-  itemId: number
+  itemId: string
+  category?: string
   type: string
   name: string
   rating: number
   originalRating: number
   reviewTitle: string
   reviewContent: string
+  likeCount: number
   upVotes: number
   downVotes: number
   helpful: boolean
   relevanceScore: number
   boughtDate: string
   clientType: string
-  os: string
-  source: string
-  terminal: string
-  network: string
+}
+
+export interface ExtractReviewMetadataResult {
+  itemId: number
+  reviews: Review[]
 }

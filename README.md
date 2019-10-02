@@ -13,7 +13,7 @@
 ## Features ✨
 
 - Based on [Amazon Cell Phones Reviews dataset project](https://github.com/grikomsn/amazon-cell-phones-reviews)
-- Scrape one or multiple categories
+- Scrape multiple categories and saves into one and separate files
 - Scrapes basic metadata with ratings and reviews
 - Use multiple Puppeteer pages as _workers_
 - Configurable timeout for rate limits cooldowns (read more below)
@@ -51,13 +51,13 @@ You can download pre-scraped datasets at [Kaggle (Lazada Indonesian Reviews)](ht
 #### Using Visual Studio Code
 
 - Open the project directory in Visual Studio Code.
-- Select and execute **Scrape Search Results** in the launch options on the Debug tab (exported to `./data/yyyymmdd-category-items.csv`).
-- Then select and execute **Scrape Item Reviews** (exported to `./data/yyyymmdd-category-reviews.csv`).
+- Select and execute **Scrape Search Results** in the launch options on the Debug tab (exported to `./data/yyyymmdd-category-items.csv` and `./data/yyyymmdd-items.csv`).
+- Then select and execute **Scrape Item Reviews** (exported to `./data/yyyymmdd-category-reviews.csv` and `./data/yyyymmdd-reviews.csv`).
 
 #### Using Command Line
 
-- Run `npm run scrape:items` or `yarn scrape:items` first to scrape initial item results (exported to `./data/yyyymmdd-category-items.csv`).
-- Then run `npm run scrape:reviews` or `yarn scrape:reviews` to scrape item reviews (exported to `./data/yyyymmdd-category-reviews.csv`).
+- Run `npm run scrape:items` or `yarn scrape:items` first to scrape initial item results (exported to `./data/yyyymmdd-category-items.csv` and `./data/yyyymmdd-items.csv`).
+- Then run `npm run scrape:reviews` or `yarn scrape:reviews` to scrape item reviews (exported to `./data/yyyymmdd-category-reviews.csv` and `./data/yyyymmdd-reviews.csv`).
 
 ## Available Scripts 📝
 

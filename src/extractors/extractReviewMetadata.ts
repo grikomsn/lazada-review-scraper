@@ -1,4 +1,4 @@
-import { Review } from '../types'
+import { ExtractReviewMetadataResult, Review } from '../types'
 
 export default function extractReviewMetadata() {
   const lineBreakRegex = /(\r?\n|\r)+/g
@@ -28,16 +28,15 @@ export default function extractReviewMetadata() {
       relevanceScore: item.relevanceScore,
       boughtDate: item.boughtDate,
       clientType: item.clientType,
-      ...item.submitInfo,
     }
     return review
   })
 
-  const itemId = model.item
+  const itemId: number = model.item
     ? model.item.itemId
     : reviews.length > 0
     ? reviews[0].itemId
     : null
 
-  return { itemId, reviews }
+  return { itemId, reviews } as ExtractReviewMetadataResult
 }
